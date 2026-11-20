@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OverDou.</title>
+     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">   <link rel="stylesheet" href="css/style.css"> 
+</head>
+<body>
+    <header>
+         <h1>OverDou.Treatss</h1>
+         <img src="img/overdou.logo trans.png" alt="Foto Produk" width="500">
+         <p>Flavor, Taken Further</p>
+    <nav>
+        <a href="#tentang">Cerita Kami</a> 
+        <a href="#produk">Menu</a> 
+        <a href="#harga">Daftar Harga</a>
+        <a href="#kontak">Info Pemesanan</a>
+    </nav>
+    </header>
+  
+   <!--Bagaimana MEreka tahu -->
+   <section id="tentang">
+    <h2>Cerita Kami</h2>
+    <p>OverDou merupakan usaha rumahan yang bergerak dibidang bakery, menghadirkan cinnamon roll dan berbagai camilan panggang yang dibuat dengan penuh perhatian. 
+    Berawal dari langkah kecil dalam merintis usaha, OverDou terus belajar dan berkembang untuk menghadirkan produk yang lezat dan bisa menikmati dalam berbagai momen.</p>
+   </section>
+  
+   <section id="produk">
+        <h2>Menu</h2>
+        <h3>Cinnamon Rolls</h3>
+        <img src="img/OverdouProduk.jpeg" alt="Foto Produk" width="300">
+        <p>Cinnamon roll merupakan salah satu produk bakery berupa roti gulung dengan perpaduan rasa manis dan aroma kayu manis yang khas.
+            Di Over Dou, cinnamon roll hadir dengan tekstur lembut dan berbagai pilihan topping yang menambah cita rasa di setiap gigitan.</p>
+        <h4>Clasic Cinnamon Roll</h4>
+        <img src="img/Clasic Cinnamons roll.jpg" alt="200">
+        <h5>Cinnamon Roll dengan CreamCheese Frosting</h5>
+        <h6>Simple, soft and delicious</h6>
+        <p class="harga-produk">Rp13.000</p>
+        <h4>Salted Caramel Biscof Roll</h4>
+        <img src="img/Biscof.jpeg" alt="Foto Biscof" width="200">
+        <h5>Cinnamon Roll dengan CreamCheese Frosting + Sauce Salted Caramel + Biscof ccokies</h5>
+        <h6>Sweet caramel with a little crunch</h6>
+        <p class="harga-produk">Rp15.000</p>
+        <h4>Salted Caramel Cinnamon roll Roll</h4>
+        <img src="img/SaltedCaramel.jpeg" alt="Foto Biscof" width="200">
+        <h5>Cinnamon Roll dengan CreamCheese Frosting + Sauce Salted Caramel</h5>
+        <h6>Sweet caramel with a little crunch</h6>
+        <p class="harga-produk">Rp13.000</p>
+        <h4>Oreo&Crumb Cinnamon Roll</h4>
+        <img src="img/Oreo & Crumb Cinnamon Roll.jpg" alt="200">
+        <h5>Cinnamon Roll dengan CreamCheese Frosting + Oreo Crumble + Oreo</h5>
+        <h6>Creamy treat with Oreo Crunch</h6>
+        <p class="harga-produk">Rp14.000</p>
+        <h4>Double Choco Cinnamon Roll</h4>
+        <img src="img/Doublechoco.jpeg" alt="Foto Double Choco" width="200">
+        <h5>Cinnamon Roll dengan CreamCheese Frosting + Chocolate Cacah + Coklat glaze</h5>
+        <h6>Double the chocolate, Double the pleasure</h6>
+        <p class="harga-produk">Rp14.000</p>
+        <h4>Blueberry Cinnamon Roll</h4>
+        <img src="img/Blueberry.jpeg" alt="Foto Blueberry" width="200">
+        <h5>Cinnamon Roll dengan CreamCheese Frosting + Blueberry Jum </h5>
+        <h6>Creamy treat with Blueberry Jum</h6>
+        <p class="harga-produk">Rp13.000</p>
+
+   </section>
+
+   <section id="harga">
+    <h2>Daftar Harga</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Nama Produk</th>
+                <th>harga</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Clasic Cinnamon Roll</td>
+                <td>Rp13.000</td>
+            </tr>
+
+            <tr>
+                <td>Blueberry Jum Cinnamon Roll</td>
+                <td>Rp13.000</td>
+            </tr>
+
+             <tr>
+                <td>Salted Caramel Cinnamon Roll</td>
+                <td>Rp13.000</td>
+            </tr>
+
+            <tr>
+                <td>Oreo&CRumb Cinnamon Roll</td>
+                <td>Rp14.000</td>
+            </tr>
+
+            <tr>
+                <td>Double Choco Cinnamon Roll</td>
+                <td>Rp14.000</td>
+            </tr>
+
+              <tr>
+                <td>Salted Caramel Biscoff Roll</td>
+                <td>Rp15.000</td>
+            </tr>
+
+        </tbody>
+    </table>
+
+   </section>
+   
+   <section id="kontak">
+
+     <h2>Info Pemesanan</h2>
+     <p>nikmati produk OverDou dengan melakukan Pemesanana melalui 
+        Open Po atau kunjungi lapak kami di bazar CFD</p>
+
+    <!--FORM KONTAK-->
+    <form action="#" method="post">
+        <label for="nama">Nama</label><br>
+        <input type="text" id="nama" name="nama" required>
+        <br><br>
+
+        <label for="wa">Nomor WhatsApp</label><br>
+        <input type="tel" id="wa" name="wa" required>
+        <br><br>
+
+        <label for="produk">Produk yang diminati</label><br>
+        <select id="produk" name="produk">
+            <option>Clasic Cinnamon Roll</option>
+            <option>Biscoff Roll</option>
+            <option>Oreo & Crumb</option>
+            <option>Double Choco</option>
+            <option>Blueberry</option>
+        </select>
+        <br><br>
+
+        <label for="pesan">Pesan</label><br>
+        <textarea id="pesan" name="pesan" rows="4"></textarea>
+        <br><br>
+
+        <button type="submit">Kirim</button>
+
+          </form>
+
+    <!-- GOOGLE MAPS -->
+    <h3>Lokasi Kami</h3>
+    <a href="https://maps.app.goo.gl/qxnb4nBR6cpVE7t36"></a>
+
+    <!-- INSTAGRAM DAN WHATSAPP -->
+    <h3>Hubungi Kami</h3>
+
+    <a href="https://www.instagram.com/overdou.treatss/">
+        Instagram OverDou
+    </a>
+
+    <br>
+
+    <a href="https://wa.me/62882003888051?text=Halo%20OverDou">
+        Pesan Via WhatsApp
+    </a>
+
+   </section>
+   
+
+</body>
+</html>

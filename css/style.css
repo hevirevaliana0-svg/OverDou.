@@ -1,0 +1,774 @@
+:root {
+    --orange: #f0a85c;       
+    --orange-soft: #fde7cd;  
+    --maroon: #871f3a;       
+    --brown: #3e2b20;        
+    --cream: #fffaf0;
+    --sand: #fff3e0;
+    --line: #efe3cc;
+    --text-soft: #5f4838;
+    --font-judul: 'Fredoka', 'Poppins', sans-serif;
+}
+
+/* Pengaturan dasar halaman */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background-color: var(--cream);
+    color: var(--brown);
+    line-height: 1.7;
+}
+
+/* ---------- Header (hero) ---------- */
+header {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    grid-template-areas:
+        "judul logo"
+        "tagline logo";
+    align-content: center;
+    column-gap: 48px;
+    padding: 130px max(20px, calc((100% - 1120px) / 2)) 85px;
+    background-color: var(--brown);
+    color: var(--cream);
+    border-radius: 0 0 48px 48px;
+}
+
+header h1 {
+    grid-area: judul;
+    align-self: end;
+    margin: 0 0 12px;
+    color: var(--orange);
+    font-size: clamp(40px, 6.5vw, 74px);
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: -1.5px;
+}
+
+header img {
+    grid-area: logo;
+    justify-self: end;
+    align-self: center;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    filter: drop-shadow(0 12px 22px rgba(0, 0, 0, 0.35));
+}
+
+header p {
+    grid-area: tagline;
+    align-self: start;
+    margin: 0;
+    font-size: 21px;
+    font-weight: 500;
+    color: var(--orange-soft);
+}
+
+/*Navigasi */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 10px max(20px, calc((100% - 1120px) / 2));
+    background-color: rgba(43, 27, 19, 0.94);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+nav::before {
+    content: "OverDou.Treatss";
+    margin-right: auto;
+    font-family: var(--font-judul);
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--orange);
+}
+
+nav a {
+    padding: 8px 16px;
+    border-radius: 999px;
+    color: var(--cream);
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+nav a:hover {
+    background-color: rgba(255, 250, 240, 0.15);
+}
+
+/* Tombol terakhir (Info Pemesanan) dibuat menonjol */
+nav a:last-child {
+    margin-left: 6px;
+    background-color: var(--orange);
+    color: var(--brown);
+    font-weight: 600;
+}
+
+nav a:last-child:hover {
+    background-color: #fff;
+}
+
+
+section {
+    padding: 90px max(20px, calc((100% - 1120px) / 2));
+}
+
+section h2 {
+    margin: 0;
+    font-size: clamp(30px, 4.5vw, 46px);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.5px;
+}
+
+/* Cerita Kami */
+#tentang h2,
+#produk h2 {
+    font-family: var(--font-judul);
+    font-size: clamp(34px, 5vw, 56px);
+    line-height: 1.15;
+    text-decoration: underline wavy var(--orange);
+    text-decoration-thickness: 3px;
+    text-underline-offset: 12px;
+    text-decoration-skip-ink: none;
+}
+
+/* ==========================================================
+   TENTANG KAMI (CERITA KAMI)
+   ========================================================== */
+#tentang {
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    align-items: center;
+    gap: 64px;
+    padding: 140px max(20px, calc((100% - 1120px) / 2)) 150px;
+    background-color: var(--cream);
+    background-image: radial-gradient(rgba(135, 31, 58, 0.09) 1.6px, transparent 1.6px);
+    background-size: 28px 28px;
+}
+
+/*hiasan latar*/
+#tentang::after {
+    content: "OverDou.";
+    position: absolute;
+    right: -10px;
+    bottom: -50px;
+    font-family: var(--font-judul);
+    font-size: clamp(120px, 21vw, 300px);
+    font-weight: 700;
+    line-height: 1;
+    color: transparent;
+    -webkit-text-stroke: 2px rgba(135, 31, 58, 0.14);
+    pointer-events: none;
+}
+
+#tentang h2 {
+    margin: 0;
+}
+
+#tentang p {
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    font-size: 19px;
+    color: var(--text-soft);
+}
+
+#tentang p::first-letter {
+    float: left;
+    margin: 0.04em 0.12em 0 0;
+    font-family: var(--font-judul);
+    font-size: 3.6em;
+    font-weight: 700;
+    line-height: 0.85;
+    color: var(--maroon);
+}
+
+/* ==========================================================
+   MENU
+   ========================================================== */
+#produk {
+    position: relative;
+    overflow-x: clip;
+    display: flow-root;
+    padding: 140px max(20px, calc((100% - 860px) / 2)) 130px;
+    background-color: #fff;
+}
+
+/* hiasan pita oranye */
+#produk::before {
+    content: "";
+    position: absolute;
+    z-index: 5;
+    top: -27px;
+    left: -40px;
+    right: -40px;
+    height: 54px;
+    background:
+        var(--orange)
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1400' height='54'%3E%3Ctext x='24' y='36' textLength='1352' lengthAdjust='spacing' font-family='Arial Black,Arial,sans-serif' font-weight='900' font-size='24' fill='%233e2b20'%3ECINNAMON ROLL %E2%80%A2 OPEN PO %E2%80%A2 BAZAR CFD %E2%80%A2 FLAVOR, TAKEN FURTHER %E2%80%A2 %3C/text%3E%3C/svg%3E")
+        0 0 / 1400px 54px repeat-x;
+    box-shadow: 0 10px 24px rgba(62, 43, 32, 0.25);
+    rotate: -1.6deg;
+    animation: geser 40s linear infinite;
+}
+
+#produk h2 {
+    margin-bottom: 8px;
+}
+
+#produk h3 {
+    margin: 0 0 24px;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--maroon);
+}
+
+#produk > p {
+    max-width: 640px;
+    margin: 0 0 20px;
+    color: var(--text-soft);
+}
+
+/* Foto produk */
+#produk img {
+    float: right;
+    width: 190px;
+    height: auto;
+    margin: 4px 0 16px 28px;
+    border-radius: 20px;
+    transition: transform 0.3s ease;
+}
+
+#produk img:hover {
+    transform: rotate(-2deg) scale(1.04);
+}
+
+/* Foto utama di bagian atas menu */
+#produk h3 + img {
+    float: none;
+    display: block;
+    width: 100%;
+    max-width: 360px;
+    margin: 0 0 28px;
+    border-radius: 24px;
+}
+
+/* Nama produk (harga tampil di sisi kanan) */
+#produk h4 {
+    clear: both;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin: 36px 0 6px;
+    padding-top: 30px;
+    border-top: 1px solid var(--line);
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+/* Harga produk.
+   Urutan harga mengikuti urutan produk di HTML. Jika harga atau urutan
+   berubah, ubah juga angka di bawah ini. */
+#produk h4::after {
+    content: "";
+    flex-shrink: 0;
+    padding: 2px 14px;
+    background-color: var(--orange);
+    border-radius: 999px;
+    color: var(--brown);
+    font-size: 16px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+#produk h4:nth-of-type(1)::after { content: "Rp13.000"; }
+#produk h4:nth-of-type(2)::after { content: "Rp15.000"; }
+#produk h4:nth-of-type(3)::after { content: "Rp13.000"; }
+#produk h4:nth-of-type(4)::after { content: "Rp14.000"; }
+#produk h4:nth-of-type(5)::after { content: "Rp14.000"; }
+#produk h4:nth-of-type(6)::after { content: "Rp13.000"; }
+
+/* Komposisi */
+#produk h5 {
+    margin: 0 0 10px;
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--text-soft);
+}
+
+/* Tagline rasa */
+#produk h6 {
+    display: inline-block;
+    margin: 0 0 6px;
+    padding: 3px 14px;
+    background-color: var(--orange-soft);
+    border-radius: 999px;
+    color: var(--maroon);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* ---------- Daftar Harga ---------- */
+#harga {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    align-items: start;
+    gap: 56px;
+    background-color: var(--cream);
+}
+
+#harga table {
+    width: 100%;
+    border: 1px solid var(--line);
+    border-collapse: separate;
+    border-spacing: 0;
+    background-color: #fff;
+    border-radius: 24px;
+    overflow: hidden;
+}
+
+#harga th,
+#harga td {
+    padding: 16px 22px;
+    border: none;
+    border-bottom: 1px solid var(--line);
+    text-align: left;
+}
+
+#harga th {
+    background-color: var(--brown);
+    color: var(--orange);
+    font-size: 15px;
+}
+
+#harga tbody tr:last-child td {
+    border-bottom: none;
+}
+
+#harga tbody tr:hover {
+    background-color: var(--orange-soft);
+}
+
+/* Kolom harga rata kanan */
+#harga th:last-child,
+#harga td:last-child {
+    text-align: right;
+    white-space: nowrap;
+}
+
+#harga td:last-child {
+    font-weight: 700;
+    color: var(--maroon);
+}
+
+/* ---------- Info Pemesanan ---------- */
+#kontak {
+    padding-inline: max(20px, calc((100% - 560px) / 2));
+    background-color: var(--brown);
+    color: var(--cream);
+    text-align: center;
+}
+
+#kontak h2 {
+    margin-bottom: 14px;
+    color: var(--orange);
+}
+
+#kontak p {
+    margin: 0 0 34px;
+    font-size: 17px;
+    color: #f3e6d3;
+}
+
+#kontak form {
+    margin-bottom: 40px;
+    padding: 32px;
+    background-color: #fff;
+    border-radius: 28px;
+    color: var(--brown);
+    text-align: left;
+    box-shadow: 0 10px 28px rgba(62, 43, 32, 0.18);
+}
+
+#kontak br {
+    display: none;
+}
+
+#kontak label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+#kontak input,
+#kontak select,
+#kontak textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 18px;
+    padding: 12px 14px;
+    background-color: var(--cream);
+    border: 1px solid #d6c7b3;
+    border-radius: 12px;
+    color: var(--brown);
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+}
+
+#kontak textarea {
+    resize: vertical;
+}
+
+#kontak input:focus,
+#kontak select:focus,
+#kontak textarea:focus {
+    background-color: #fff;
+    border-color: var(--orange);
+    outline: 2px solid var(--orange);
+}
+
+#kontak button {
+    width: 100%;
+    padding: 14px;
+    background-color: var(--maroon);
+    border: none;
+    border-radius: 999px;
+    color: var(--cream);
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#kontak button:hover {
+    background-color: var(--brown);
+}
+
+#kontak h3 {
+    margin: 28px 0 12px;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--cream);
+}
+
+/* Link Maps, Instagram, dan WhatsApp tampil sebagai tombol */
+#kontak > a {
+    display: inline-block;
+    margin: 5px 4px;
+    padding: 12px 26px;
+    border: 2px solid var(--cream);
+    border-radius: 999px;
+    color: var(--cream);
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+}
+
+#kontak > a:hover {
+    background-color: var(--cream);
+    color: var(--brown);
+}
+
+#kontak > a[href*="wa.me"] {
+    background-color: var(--orange);
+    border-color: var(--orange);
+    color: var(--brown);
+}
+
+#kontak > a[href*="wa.me"]:hover {
+    background-color: #fff;
+    border-color: #fff;
+}
+
+/* Link Maps di HTML belum ada teksnya, jadi teksnya ditambahkan lewat CSS */
+#kontak > a:empty::before {
+    content: "Buka di Google Maps";
+}
+
+/* ---------- Fokus keyboard ---------- */
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid var(--maroon);
+    outline-offset: 3px;
+}
+
+header a:focus-visible,
+#kontak a:focus-visible {
+    outline-color: var(--orange);
+}
+
+/* ==========================================================
+   TAMBAHAN
+   ========================================================== */
+
+/* Warna saat teks diblok */
+::selection {
+    background-color: var(--maroon);
+    color: var(--cream);
+}
+
+/* Animasi pembuka di header (sekali saat halaman dibuka) */
+@keyframes muncul {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@keyframes logo-muncul {
+    from {
+        opacity: 0;
+        transform: scale(0.92);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Gerak tulisan pada pita oranye */
+@keyframes geser {
+    to {
+        background-position-x: -1400px;
+    }
+}
+
+header h1,
+header p {
+    animation: muncul 0.7s ease both;
+}
+
+header p {
+    animation-delay: 0.12s;
+}
+
+header img {
+    animation: logo-muncul 0.9s ease both;
+}
+
+/* Cerita Kami dan Menu muncul perlahan saat digulir (Chrome/Edge terbaru).
+   Browser yang belum mendukung menampilkan halaman seperti biasa. */
+@supports (animation-timeline: view()) {
+    @keyframes naik {
+        from {
+            opacity: 0;
+            translate: 0 44px;
+        }
+        to {
+            opacity: 1;
+            translate: 0 0;
+        }
+    }
+
+    #tentang h2,
+    #tentang p,
+    #produk h2,
+    #produk h3,
+    #produk > p,
+    #produk h3 + img,
+    #produk h4 {
+        animation: naik linear both;
+        animation-timeline: view();
+        animation-range: entry 0% entry 40%;
+    }
+}
+
+/* Footer (muncul jika <footer> ditambahkan di HTML) */
+footer {
+    padding: 26px 20px;
+    background-color: #2b1b13;
+    color: #d9c3aa;
+    font-size: 14px;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Tombol WhatsApp melayang (muncul jika <a class="wa-float"> ditambahkan di HTML) */
+.wa-float {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 100;
+    padding: 13px 22px;
+    background-color: var(--maroon);
+    border-radius: 999px;
+    box-shadow: 0 8px 20px rgba(62, 43, 32, 0.3);
+    color: var(--cream);
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.wa-float:hover {
+    background-color: var(--brown);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    * {
+        transition: none !important;
+    }
+
+    header h1,
+    header p,
+    nav,
+    header img,
+    #produk::before {
+        animation: none;
+    }
+}
+
+/* ---------- Tablet ---------- */
+@media screen and (max-width: 860px) {
+    header {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "judul"
+            "logo"
+            "tagline";
+        padding-top: 110px;
+        padding-bottom: 60px;
+        text-align: center;
+    }
+
+    header h1 {
+        margin-bottom: 8px;
+    }
+
+    header img {
+        justify-self: center;
+        max-width: 280px;
+        margin-bottom: 8px;
+    }
+
+    section {
+        padding-top: 64px;
+        padding-bottom: 64px;
+    }
+
+    #tentang,
+    #harga {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    #tentang {
+        padding-top: 90px;
+        padding-bottom: 110px;
+    }
+
+    #produk {
+        padding-top: 100px;
+        padding-bottom: 90px;
+    }
+}
+
+/* ---------- HP ---------- */
+@media screen and (max-width: 560px) {
+    header {
+        border-radius: 0 0 30px 30px;
+    }
+
+    #produk img {
+        width: 130px;
+        margin-left: 18px;
+    }
+
+    #produk h3 + img {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    #produk h4 {
+        font-size: 19px;
+    }
+
+    #produk h4::after {
+        padding: 2px 10px;
+        font-size: 14px;
+    }
+
+    #harga th,
+    #harga td {
+        padding: 12px 14px;
+        font-size: 14px;
+    }
+
+    #kontak form {
+        padding: 22px;
+    }
+
+    #kontak > a {
+        display: block;
+        margin: 8px 0;
+    }
+
+    .wa-float {
+        right: 14px;
+        bottom: 14px;
+        padding: 11px 18px;
+        font-size: 14px;
+    }
+}
+
+/* ---------- Bar navigasi di layar kecil ---------- */
+@media screen and (max-width: 700px) {
+    html {
+        scroll-padding-top: 64px;
+    }
+
+    nav::before {
+        display: none;
+    }
+
+    nav {
+        gap: 2px;
+        padding: 8px 12px;
+        overflow-x: auto;
+    }
+
+    nav a {
+        flex-shrink: 0;
+        padding: 7px 12px;
+        font-size: 14px;
+    }
+
+    header {
+        padding-top: 100px;
+    }
+}
